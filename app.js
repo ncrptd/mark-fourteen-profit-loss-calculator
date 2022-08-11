@@ -25,7 +25,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
     let profitPercentage = (profit / (initial * quantity)) * 100;
     let color = "green";
     showOutput(
-      `Your Profit is ${profit} and Loss Percentage is ${profitPercentage.toFixed()}%`,
+      `Your Profit is ${profit} and Profit Percentage is ${profitPercentage.toFixed()}%`,
       color
     );
   } else {
