@@ -8,25 +8,27 @@ function clickHandler() {
   let initialPrice = +ipInput.value;
   let quantityOfStocks = +quantityInput.value;
   let currentPrice = +cpInput.value;
-  calculateProfitAndLoss(initialPrice, quantityOfStocks, currentPrice);
+  if (initialPrice == "" || quantityInput == "" || currentPrice == "") {
+    showOutput("Please Enter All The Fields", "red");
+  } else {
+    calculateProfitAndLoss(initialPrice, quantityOfStocks, currentPrice);
+  }
 }
 
 function calculateProfitAndLoss(initial, quantity, current) {
   if (initial > current) {
     let loss = (initial - current) * quantity;
     let lossPercentage = (loss / (initial * quantity)) * 100;
-    let color = "red";
     showOutput(
       `Your Loss is ${loss} and Loss Percentage is ${lossPercentage.toFixed()}%`,
-      color
+      "red"
     );
   } else if (current > initial) {
     let profit = (current - initial) * quantity;
     let profitPercentage = (profit / (initial * quantity)) * 100;
-    let color = "green";
     showOutput(
       `Your Profit is ${profit} and Profit Percentage is ${profitPercentage.toFixed()}%`,
-      color
+      "green"
     );
   } else {
     showOutput(`Well You Have Nothing To 'LOOSE' or 'GAIN'`);
