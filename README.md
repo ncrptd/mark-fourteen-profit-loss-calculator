@@ -6,3 +6,8 @@ An app to calculates your stocks profit and loss
 * Enter the current price of your stocks
 * Click on the Tell Me Button
 * Output will be shown on the right side of the screen
+
+## Programming Language:
+* Html
+* CSS
+* Javascript
