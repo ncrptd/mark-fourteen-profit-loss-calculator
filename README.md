@@ -1,5 +1,5 @@
 # mark-fourteen-profit-loss-calculator
-An app to calculates your stocks profit and loss
+An app to calculate your stocks profit and loss
 ## How to use:
 * Enter stocks price you bought
 * Enter the quantity of stocks you bought
