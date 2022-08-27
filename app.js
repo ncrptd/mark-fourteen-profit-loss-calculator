@@ -8,8 +8,15 @@ function clickHandler() {
   let initialPrice = +ipInput.value;
   let quantityOfStocks = +quantityInput.value;
   let currentPrice = +cpInput.value;
-  if (initialPrice == "" || quantityInput == "" || currentPrice == "") {
-    showOutput("Please Enter All The Fields", "red");
+  if (
+    !initialPrice ||
+    !quantityInput ||
+    !currentPrice ||
+    initialPrice < 0 ||
+    quantityInput < 0 ||
+    currentPrice < 0
+  ) {
+    showOutput("Please Enter valid input", "red");
   } else {
     calculateProfitAndLoss(initialPrice, quantityOfStocks, currentPrice);
   }
